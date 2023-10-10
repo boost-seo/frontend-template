@@ -1,4 +1,4 @@
-import { REVALIDATE_TIME } from '@/config/constants';
+import { REVALIDATE_TIME } from '@/config';
 import { blogApiClient } from '@/packages/api';
 import { BasicBlogView } from '@/packages/apigen';
 

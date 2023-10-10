@@ -1,3 +1,3 @@
 export { constants } from './constants';
-export { environmentVariables } from './env';
+export { environmentVariables, REVALIDATE_TIME } from './env';
 export { siteConfig } from './site';
