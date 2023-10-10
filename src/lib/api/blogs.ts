@@ -1,8 +1,6 @@
-import { isProd } from '@/config/env';
+import { REVALIDATE_TIME } from '@/config/constants';
 import { blogApiClient } from '@/packages/api';
 import { BasicBlogView } from '@/packages/apigen';
-
-const REVALIDATE_TIME = isProd ? 3600 * 1 : 0; // 1 hours in prod, 0 in dev
 
 export const getWebsiteDetails = async () => {
   try {

@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
 
   logo: {
     url: process.env.SITE_CONFIG_LOGO_URL || '/images/icon.svg',
-    alt: process.env.SITE_CONFIG_LOGO_ALT || 'logo',
+    alt: `${process.env.SITE_CONFIG_NAME} Logo`,
     width: 30,
     height: 30,
   },
