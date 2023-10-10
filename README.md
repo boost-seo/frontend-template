@@ -1,7 +1,3 @@
-Certainly! I've added that note under the Prerequisites section in the README.md:
-
----
-
 # BoostSeo Hosted Blog with Next.js
 
 Welcome to the starter code template for the Boost SEO hosted blog using Next.js. Tailor this template to your needs, or follow the simple one-click deployment method to launch your blog in minutes.
