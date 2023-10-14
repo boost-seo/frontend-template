@@ -208,7 +208,8 @@ const BlogPage = async ({ params }: BlogPageProps) => {
               />
 
               {blog.heroImage.sourceUrl &&
-                blog.heroImage.source !== 'stablediffusion' && (
+                blog.heroImage.source &&
+                !['stablediffusion'].includes(blog.heroImage.source) && (
                   <a
                     className='text-muted-foreground hover:text-card-foreground mx-auto flex items-center gap-0.5 text-center text-sm'
                     href={blog.heroImage.sourceUrl}
