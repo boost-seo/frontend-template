@@ -15,8 +15,8 @@ interface CustomImageProps {
   alt: string;
   width: number;
   height: number;
-  'bs-source': ImageSource;
-  'bs-source-url': string;
+  'bs-source'?: ImageSource;
+  'bs-source-url'?: string;
 }
 
 const components: Partial<
@@ -89,15 +89,17 @@ const components: Partial<
         >
           {children}
         </Image>
-        {imageProps['bs-source'] !== 'stablediffusion' && (
-          <a
-            className='text-muted-foreground hover:text-card-foreground mx-auto flex items-center gap-0.5 text-center text-sm'
-            href={imageProps['bs-source-url']}
-          >
-            source: {imageProps['bs-source']}
-            <ExternalLink className='inline h-3 w-3' />
-          </a>
-        )}
+        {imageProps['bs-source'] &&
+          imageProps['bs-source-url'] &&
+          imageProps['bs-source'] !== 'stablediffusion' && (
+            <a
+              className='text-muted-foreground hover:text-card-foreground mx-auto flex items-center gap-0.5 text-center text-sm'
+              href={imageProps['bs-source-url']}
+            >
+              source: {imageProps['bs-source']}
+              <ExternalLink className='inline h-3 w-3' />
+            </a>
+          )}
       </div>
     );
   },
